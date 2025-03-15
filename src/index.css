@@ -1,0 +1,255 @@
+/* Estilo Global */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #37a1f7;
+}
+
+/* Navbar */
+#navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-links a {
+    color: #fff;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+#nav-links a:hover {
+    color: #37a1f7;
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+#sidebar {
+    width: 300px;
+    margin-top: 1rem;
+}
+
+/* Postagens */
+.post {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Botões e Links de Ação */
+.read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #37a1f7;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #2a81c7;
+}
+
+button[type="submit"],
+.read-more {
+    cursor: pointer;
+}
+
+/* Estilo para Inputs */
+input[type="text"] {
+    padding: 0.6rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 0.8rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #37a1f7;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 0.6rem 1.2rem;
+    background-color: #37a1f7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2a81c7;
+}
+
+/* Estilo para Tags */
+#tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+#tags-container a {
+    background-color: #eee;
+    padding: 0.5rem 0.8rem;
+    margin: 0.3rem;
+    border-radius: 20px;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+#tags-container a:hover {
+    background-color: #37a1f7;
+    color: #fff;
+}
+
+/* Espaçamento entre Seções */
+#search-bar,
+#categories,
+#tags {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    #navbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #sidebar {
+        width: 100%;
+    }
+    .post img {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .post {
+        padding: 1rem;
+    }
+    #tags-container a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+/* Estilo para o botão hamburger */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hamburger:hover {
+    color: #37a1f7;
+    transform: scale(1.1);
+}
+
+/* Responsividade do menu */
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: rgba(51, 51, 51, 0.95);
+        padding: 1rem 2rem;
+        position: absolute;
+        top: 4rem;
+        right: 1rem;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    #nav-links.open {
+        display: flex;
+    }
+
+    #nav-links li a {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    #nav-links li a:hover {
+        color: #37a1f7;
+        text-decoration: underline;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+    }
+}
+
+/* Animação do menu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
