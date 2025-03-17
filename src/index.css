@@ -253,3 +253,33 @@ footer {
         transform: translateY(0);
     }
 }
+/* Botão Voltar ao Topo */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #37a1f7; /* Alinhado aos estilos existentes */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #2a81c7; /* Efeito hover consistente com o tema */
+    transform: scale(1.05);
+}
+
+/* Responsividade do botão */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+    }
+}

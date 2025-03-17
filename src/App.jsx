@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import PostList from "./components/PostList";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Sidebar />
             </main>
             <Footer />
+            <ScrollToTopButton />
         </div>
     );
 }

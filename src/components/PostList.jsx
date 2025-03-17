@@ -17,6 +17,13 @@ function PostList() {
                 "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
             author: "Cleiton Santos",
         },
+        {
+            image: "img/f3.jpg",
+            title: "Balões",
+            description:
+                "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+            author: "Cleiton Santos",
+        },
     ];
 
     return (
